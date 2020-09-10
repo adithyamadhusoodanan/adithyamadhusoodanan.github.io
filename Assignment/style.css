@@ -1,0 +1,96 @@
+*{
+    padding:6px;
+    margin:auto;
+font-family: Arial, Verdana, sans-serif;
+background-color:black;
+}
+
+
+
+body {
+font-family: Arial;
+background-color: black;
+}
+
+#navbar{
+    height: 30px;
+    width: 100%;
+    color: red;
+    background-color: lightgrey;
+    font-size:30px
+    
+}
+
+p{
+    padding: 2em;
+    font-size:25px;
+    color:white;
+    font-style:italic;
+}
+
+.ead{
+    font-size:30px;
+    color:#FFDF00;
+    text-align:center;
+}
+
+.bad{
+    font-size:30px;
+    color:red;
+    text-align:center;
+}
+
+
+
+.gad{
+    
+    font-size:30px;
+    color:white;
+    text-align:center;
+}
+
+.had{
+    
+    font-size:30px;
+    color:white;
+    text-align:center;
+}
+
+table, th, td {
+    
+text-align:center;
+margin: auto;
+  border: 3px solid white;
+}
+
+
+h1{
+    margin: auto;
+    color: grey;
+    font-size:12px;
+    text-align: center;
+    width: 50%;
+    font-weight:bold;
+    font-size:80px;
+}
+
+
+form{
+color: white;}
+
+#contact{
+    font-size:20px;
+}
+
+h2{
+    margin: auto;
+    color: white;
+    
+    text-align: center;
+    width: 50%;
+    font-weight:bold;
+    font-size:30px;
+}
+
+
+
