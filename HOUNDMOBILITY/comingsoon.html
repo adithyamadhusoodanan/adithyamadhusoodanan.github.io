@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hound Mobility | Coming Soon</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+
+  <body>
+
+    <!-- <div class="form">
+      <form name="submit-to-google-sheet">
+        <div class="formin">
+          <a>To know more</a>
+          <input name="email" type="email" placeholder="Enter your email" required>
+        </div>
+
+        <button class="btn" type="submit">
+          <img src="assets/sub.png" />
+        </button>
+
+      </form>
+    </div> -->
+
+    <div class="form_container">
+      <form name="submit-to-google-sheet">
+        <p for="">Be the first to know</p>
+        <div class="inputField">
+          <input autocomplete="off" name="email" id="emailID" type="email" placeholder="Enter your email" required>
+          <button class="btn" type="submit" onclick="ValidateEmail()">
+            <img src="assets/sub.png" />
+          </button>
+        </div>
+      </form>
+      <div class="thanks" style="display: none;">
+        <p>Thank You! We will be in touch with you.</p>
+      </div>
+      <div class="error" style="display: none;">
+        <p>Enter a valid email ID</p>
+      </div>
+    </div>
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycby-WqnmzBrep_N-QBPfMtmxerQGfNo6FkBjrFl4D2WcqQQaMSlRWWjms9qKNktUBvH5og/exec'
+      const form = document.forms['submit-to-google-sheet']
+
+      function ValidateEmail() {
+        console.log('clicked')
+        em = document.getElementById("emailID").value
+        console.log(em)
+        var validRegex = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/
+
+        if (em.match(validRegex)) {
+          console.log("Valid email address!");
+          form.addEventListener('submit', e => {
+            e.preventDefault()
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+              .then(response => console.log('Success!', response))
+              .catch(error => console.error('Error!', error.message))
+            document.querySelector('.error').style.display = "none";
+            document.querySelector('.thanks').style.display = "block";
+            document.querySelector("form").style.display = "none";
+
+          })
+          return true;
+        } else {
+          console.log("Invalid email address!");
+
+          document.querySelector('.error').classList.add('ahashakeheartache');
+          setTimeout(function () {
+            document.querySelector('.error').classList.remove('ahashakeheartache')
+          }, 500);
+
+          // if (document.querySelector('.error').classList.contains('ahashakeheartache')) {
+          //   document.querySelector('.error').classList.remove('ahashakeheartache')
+          // } else {
+          //   document.querySelector('.error').classList.add('ahashakeheartache')
+          // }
+
+          form.addEventListener('submit', e => {
+            e.preventDefault()
+
+            document.querySelector('.error').style.display = "block";
+
+          })
+
+          return false;
+        }
+
+      }
+
+
+    </script>
+
+    <div class="comingSoon">
+      <!-- <img src="./assets//vids/Hound-2.gisf" alt="Hound Mobility Coming Soon" /> -->
+    </div>
+
+
+  </body>
+
+</html>
