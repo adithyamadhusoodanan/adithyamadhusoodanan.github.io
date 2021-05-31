@@ -1,0 +1,58 @@
+.about-landing{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+}
+
+.about-landing img{
+    width:100%;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.about-landing h1{
+    font-family: BwGradual;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 4rem;
+    color: var(--main-theme-color);
+    position: absolute;
+    top: 55%;
+    width: 100%;
+    margin: 0 auto
+}
+
+.about-landing p{
+    font-style: italic;
+    font-size: 1.1rem;
+    margin: 25px 0;
+}
+
+.about-landing a{
+    font-style: italic;
+    margin: 0;
+    cursor: pointer
+}
+
+.about-faq-container{
+    width: 100%;
+    margin: 4rem auto 6rem;
+    text-align: center
+}
+
+.faq-title h1{
+    font-family: BwGradual;
+    font-style: italic;
+    font-size: 3rem;
+}
+
+.faq-content ul{
+    margin: 2rem;
+    list-style-position: inside;
+}
+
+.faq-content li{
+    font-style: italic;
+    margin-bottom: 20px;
+}
